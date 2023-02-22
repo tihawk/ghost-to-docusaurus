@@ -1,0 +1,25 @@
+{
+  "name": "migrate-ghost-docusaurus",
+  "version": "1.0.0",
+  "description": "A simple script to read and convert exported from Ghost blog posts to Docusaurus markdown pages.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [
+    "migrate",
+    "ghost",
+    "docusaurus",
+    "markdown",
+    "blog",
+    "posts"
+  ],
+  "author": "Kiril Panayotov Blagoev",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
+  }
+}
