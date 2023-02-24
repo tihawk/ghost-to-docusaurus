@@ -2,10 +2,11 @@
   "name": "migrate-ghost-docusaurus",
   "version": "1.0.0",
   "description": "A simple script to read and convert exported from Ghost blog posts to Docusaurus markdown pages.",
-  "main": "dist/index.js",
+  "main": "dist/index.mjs",
+  "type": "module",
   "scripts": {
     "build": "rimraf ./dist && tsc",
-    "start": "npm run build && node dist/index.js"
+    "start": "npm run build && node dist/index.mjs"
   },
   "keywords": [
     "migrate",
@@ -21,5 +22,15 @@
     "@types/node": "^18.14.0",
     "rimraf": "^4.1.2",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "rehype-format": "^4.0.1",
+    "rehype-ignore": "^1.0.4",
+    "rehype-parse": "^8.0.4",
+    "rehype-remark": "^9.1.2",
+    "rehype-video": "^1.2.2",
+    "remark-gfm": "^3.0.1",
+    "remark-stringify": "^10.0.2",
+    "unified": "^10.1.2"
   }
 }
